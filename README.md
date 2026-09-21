@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -6,6 +6,9 @@
 <title>Flores amarillas ♡</title>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +19,7 @@ body {
     min-height: 100vh;
     background: #080604;
     color: white;
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     overflow: hidden;
 }
 
@@ -39,6 +42,8 @@ body {
     transform: scale(1);
 }
 
+/* FONDO */
+
 .background {
     position: absolute;
     inset: 0;
@@ -58,6 +63,8 @@ body {
     filter: blur(80px);
     z-index: -1;
 }
+
+/* CORAZÓN */
 
 .heart {
     font-size: 90px;
@@ -80,6 +87,8 @@ body {
     }
 }
 
+/* CONTENIDO */
+
 .content {
     width: min(90%, 650px);
     text-align: center;
@@ -93,14 +102,17 @@ body {
     letter-spacing: 3px;
     color: #f4c542;
     text-shadow: 0 0 15px rgba(244, 197, 66, 0.35);
+    font-weight: 600;
 }
 
 .subtitle {
     margin-top: 15px;
     color: #d9d1c0;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 1.6;
 }
+
+/* FLORES */
 
 .flower {
     position: absolute;
@@ -160,6 +172,8 @@ body {
     animation-delay: 2s;
 }
 
+/* MENSAJE */
+
 .message-box {
     background: rgba(20, 14, 5, 0.72);
     border: 1px solid rgba(244, 197, 66, 0.35);
@@ -188,6 +202,8 @@ body {
     margin-top: 25px;
 }
 
+/* BOTÓN */
+
 .next-button {
     margin-top: 35px;
     width: 58px;
@@ -207,6 +223,8 @@ body {
     box-shadow: 0 0 25px rgba(244, 197, 66, 0.2);
 }
 
+/* PÁGINA 2 */
+
 .yellow-page .content {
     max-width: 700px;
 }
@@ -217,6 +235,8 @@ body {
     margin-bottom: 25px;
     text-shadow: 0 0 18px rgba(244, 197, 66, 0.3);
 }
+
+/* PÁGINA 3 */
 
 .final-heart {
     font-size: 75px;
@@ -235,6 +255,7 @@ body {
     color: #d9d1c0;
     font-size: 16px;
 }
+
 </style>
 </head>
 
@@ -243,11 +264,16 @@ body {
 <div class="background"></div>
 <div class="glow"></div>
 
+<!-- FLORES FLOTANDO -->
+
 <div class="flower">🌼</div>
 <div class="flower">🌼</div>
 <div class="flower">🌼</div>
 <div class="flower">🌼</div>
 <div class="flower">🌼</div>
+
+
+<!-- PÁGINA 1 — LOVE ALARM -->
 
 <section class="page active" id="page1">
     <div class="content">
@@ -269,6 +295,9 @@ body {
 
     </div>
 </section>
+
+
+<!-- PÁGINA 2 — FLORES AMARILLAS -->
 
 <section class="page yellow-page" id="page2">
     <div class="content">
@@ -304,6 +333,9 @@ body {
     </div>
 </section>
 
+
+<!-- PÁGINA 3 — FINAL -->
+
 <section class="page" id="page3">
     <div class="content">
 
@@ -321,7 +353,9 @@ body {
     </div>
 </section>
 
+
 <script>
+
 function nextPage(number) {
 
     document.querySelectorAll('.page').forEach(page => {
@@ -330,6 +364,7 @@ function nextPage(number) {
 
     document.getElementById('page' + number).classList.add('active');
 }
+
 </script>
 
 </body>
